@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="11.1.1.64.93" id="region_btf_region_btf_helloRegionModulePageDef"
+                Package="de.hahn.blog.libtest.region" SkipValidation="true">
+  <parameters/>
+  <executables/>
+  <bindings>
+    <methodAction id="helloRegionModule" RequiresUpdateModel="true" Action="invokeMethod" MethodName="helloRegionModule" IsViewObjectMethod="false"
+                  DataControl="RegionModelAppModuleDataControl" InstanceName="RegionModelAppModuleDataControl.dataProvider"
+                  ReturnName="data.RegionModelAppModuleDataControl.methodResults.helloRegionModule_RegionModelAppModuleDataControl_dataProvider_helloRegionModule_result">
+      <NamedData NDName="param" NDValue="Region VC" NDType="java.lang.String"/>
+    </methodAction>
+  </bindings>
+</pageDefinition>
