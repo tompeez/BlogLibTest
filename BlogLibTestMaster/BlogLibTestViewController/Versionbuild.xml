@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="YOUR_APPVersionBuild" default="make" basedir=".">
+    <!-- # Relative path to the base directory of the application -->
+    <property name="root.dir" value="../../.."/>
+    <property name="earFileBaseName" value="BlogLibTest"/>
+    <!-- PATH TO VERSION.PROPERTIES FILE (Bsp.: src/de/hahn/blogxxxx/view/version.properties) -->
+    <property name="file.version.properties" value="./version.properties"/>
+    <property file="${file.version.properties}"/>
+    <property name="deployFolder" value="../deploy/"/>
+    <import file="${root.dir}/MasterBuild/Versionierung/Versionbuild.xml"/>
+</project>
