@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project default="build" basedir=".">
+    <property file="build.properties"/>
+    <import file="${root.dir}/MasterBuild/build/build.xml"/>
+    <target name="release">
+        <echo>Build will be started...</echo>
+        <antcall target="one-click-build"/>
+    </target>
+</project>
