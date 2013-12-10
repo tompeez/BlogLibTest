@@ -158,8 +158,8 @@
       </list>
    </hash>
    <hash n="oracle.jdeveloper.model.J2eeSettings">
-      <value n="j2eeWebAppName" v="BlogLibTestMaster-BlogLibTestViewController-webapp"/>
-      <value n="j2eeWebContextRoot" v="BlogLibTestMaster-BlogLibTestViewController-context-root"/>
+      <value n="j2eeWebAppName" v="BlogLibTestMaster-webapp"/>
+      <value n="j2eeWebContextRoot" v="bloglibtest"/>
    </hash>
    <hash n="oracle.jdeveloper.runner.RunConfigurations">
       <hash n="runConfigurationDefinitions">
