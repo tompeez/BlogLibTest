@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="11.1.1.64.93" id="DataBindings" SeparateXMLFiles="false"
+             Package="de.hahn.blog.libtest.master.view"
+             ClientType="Generic">
+  <pageMap>
+    <page path="/Dep.jspx" usageId="de_hahn_blog_libtest_master_view_DepPageDef"/>
+    <page path="/Emp.jspx" usageId="de_hahn_blog_libtest_master_view_EmpPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="de_hahn_blog_libtest_master_view_DepPageDef" path="de.hahn.blog.libtest.master.view.pageDefs.DepPageDef"/>
+    <page id="de_hahn_blog_libtest_master_view_EmpPageDef" path="de.hahn.blog.libtest.master.view.pageDefs.EmpPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="DepAppModuleDataControl" Package="de.hahn.blog.libtest.depmodel.adfbc.service"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true" SupportsFindMode="true" SupportsRangesize="true"
+                     SupportsResetState="true" SupportsSortCollection="true" Configuration="DepAppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+    <BC4JDataControl id="EmpAppModuleDataControl" Package="de.hahn.blog.libtest.empmodel.adfbc.service"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true" SupportsFindMode="true" SupportsRangesize="true"
+                     SupportsResetState="true" SupportsSortCollection="true" Configuration="EmpAppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+    <BC4JDataControl id="BlogLibTestMasterAppModuleDataControl" Package="de.hahn.blog.libtest.master.model.adfbc.service"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true" SupportsFindMode="true" SupportsRangesize="true"
+                     SupportsResetState="true" SupportsSortCollection="true" Configuration="BlogLibTestMasterAppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

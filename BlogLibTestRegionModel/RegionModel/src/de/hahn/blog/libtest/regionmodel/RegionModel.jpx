@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE JboProject SYSTEM "jbo_03_01.dtd">
+<!---->
+<JboProject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="RegionModel"
+  Version="11.1.1.64.93"
+  SeparateXMLFiles="true"
+  PackageName="de.hahn.blog.libtest.regionmodel">
+  <DesignTime>
+    <Attr Name="_jprName" Value="../../../../../../RegionModel.jpr"/>
+    <Attr Name="_NamedConnection" Value="HRConn"/>
+    <Attr Name="_appModuleNames0" Value="de.hahn.blog.libtest.regionmodel.adfbc.service.RegionModelAppModule"/>
+  </DesignTime>
+  <Containee
+    Name="entities"
+    PackageName="de.hahn.blog.libtest.regionmodel.adfbc.entities"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_EO" Value="true"/>
+      <Attr Name="_AS" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="service"
+    PackageName="de.hahn.blog.libtest.regionmodel.adfbc.service"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_AM" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="views"
+    PackageName="de.hahn.blog.libtest.regionmodel.adfbc.views"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_VO" Value="true"/>
+      <Attr Name="_VL" Value="true"/>
+    </DesignTime>
+  </Containee>
+</JboProject>
