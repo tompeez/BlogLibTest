@@ -1,0 +1,4 @@
+Create a Build Project in the target application as generic project.
+Copy the files build.xml and build.properties in to the applications build folder. 
+After that you can change the build.properties file with meaningful values!
+

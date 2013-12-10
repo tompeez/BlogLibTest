@@ -18,6 +18,7 @@
    </hash>
    <list n="listOfChildren">
       <hash><url n="URL" path="BlogLibTestViewController/BlogLibTestViewController.jpr"/></hash>
+      <hash><url n="URL" path="Build/Build.jpr"/></hash>
    </list>
    <hash n="oracle.jdeveloper.deploy.dt.DeploymentProfiles">
       <hash n="DefaultProfile">
@@ -37,7 +38,7 @@
                   </hash>
                </list>
             </hash>
-            <url n="earURL" path="deploy/BlogLibTestMaster_application1.ear"/>
+            <url n="earURL" path="deploy/BlogLibTest.ear"/>
             <value n="enterpriseAppName" v="BlogLibTestMaster_application1"/>
             <hash n="fileGroups">
                <list n="groups">
@@ -79,5 +80,6 @@
       <list n="profileList">
          <string v="BlogLibTestMaster_application1"/>
       </list>
+      <value n="Weblogic-JDBC-Auto-Sync-Key" v="false"/>
    </hash>
 </jws:workspace>
