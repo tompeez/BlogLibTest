@@ -13,9 +13,9 @@
       <property
          name="exceptionHandler">false</property>
       <property
-         name="y">233.29883</property>
+         name="y">207.23535</property>
       <property
-         name="x">582.0</property>
+         name="x">540.0</property>
    </View>
    <View
       id="View3">
@@ -40,7 +40,7 @@
       <property
          name="fromOutcome">dep</property>
       <property
-         name="sdm:polyPoints">L46,681.96405,211.44824,623.0,229.44824,R46</property>
+         name="sdm:polyPoints">L46,683.0,211.44824,581.2643,203.73535,R46</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -50,6 +50,6 @@
       <property
          name="fromOutcome">emp</property>
       <property
-         name="sdm:polyPoints">R54,624.0274,236.44824,683.0,218.44824,L54</property>
+         name="sdm:polyPoints">R54,581.0,210.73535,682.73535,218.44824,L54</property>
    </ControlFlowCase>
 </SDM>
