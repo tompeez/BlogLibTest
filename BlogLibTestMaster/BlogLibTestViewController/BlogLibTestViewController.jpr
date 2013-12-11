@@ -55,6 +55,9 @@
       <string v="oracle.toplink.workbench.addin/toplinkContentSet"/>
    </list>
    <value n="defaultPackage" v="de.hahn.blog.libtest.master.view"/>
+   <hash n="oracle.adfdtinternal.model.ide.security.SecurityPolicies">
+      <value n="grantOption" v="none"/>
+   </hash>
    <hash n="oracle.adfdtinternal.model.ide.settings.ADFMSettings">
       <value n="hasDataControls" v="true"/>
    </hash>
@@ -315,6 +318,10 @@
             <value n="id" v="ADF Common Web Runtime"/>
             <value n="isJDK" v="false"/>
          </hash>
+         <hash>
+            <value n="id" v="BC4J Security"/>
+            <value n="isJDK" v="false"/>
+         </hash>
       </list>
       <hash n="internalDefinitions">
          <list n="libraryDefinitions">
@@ -458,6 +465,10 @@
          </hash>
          <hash>
             <value n="id" v="ADF Common Web Runtime"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="BC4J Security"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>

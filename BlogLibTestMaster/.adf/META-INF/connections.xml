@@ -1,6 +1,6 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <References xmlns="http://xmlns.oracle.com/adf/jndi">
-   <Reference name="HRConn" className="oracle.jdeveloper.db.adapter.DatabaseProvider" partial="true" manageInOracleEnterpriseManager="true" deployable="true" xmlns="">
+   <Reference name="HRConn" className="oracle.jdeveloper.db.adapter.DatabaseProvider" credentialStoreKey="HRConn" xmlns="">
       <Factory className="oracle.jdeveloper.db.adapter.DatabaseProviderFactory"/>
       <RefAddresses>
          <StringRefAddr addrType="subtype">
@@ -9,11 +9,12 @@
          <StringRefAddr addrType="user">
             <Contents>hr</Contents>
          </StringRefAddr>
+         <SecureRefAddr addrType="password"/>
          <StringRefAddr addrType="DeployPassword">
             <Contents>true</Contents>
          </StringRefAddr>
          <StringRefAddr addrType="customUrl">
-            <Contents>jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=tdb02)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=TDB02B.dguv.de)))</Contents>
+            <Contents>jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=192.168.215.229)(PORT=1634))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=DEVAGFLUX)))</Contents>
          </StringRefAddr>
       </RefAddresses>
    </Reference>

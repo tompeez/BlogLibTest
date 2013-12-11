@@ -62,11 +62,6 @@
         <Item Value="DepartmentId"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="EmployeesView1Iterator" id="Dummytext2">
-      <AttrNames>
-        <Item Value="Dummytext2"/>
-      </AttrNames>
-    </attributeValues>
     <tree IterBinding="JobHistoryView2Iterator" id="JobHistoryView2">
       <nodeDefinition DefName="de.hahn.blog.libtest.empmodel.adfbc.views.JobHistoryView" Name="JobHistoryView20">
         <AttrNames>

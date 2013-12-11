@@ -158,18 +158,6 @@
       <Attr Name="_DisplaySize" Value="5"/>
     </DesignTime>
   </Attribute>
-  <Attribute
-    Name="Dummytext2"
-    Precision="255"
-    ColumnName="DUMMYTEXT2"
-    SQLType="VARCHAR"
-    Type="java.lang.String"
-    ColumnType="VARCHAR2"
-    TableName="EMPLOYEES">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="255"/>
-    </DesignTime>
-  </Attribute>
   <AccessorAttribute
     Name="Employees"
     Association="de.hahn.blog.libtest.empmodel.adfbc.entities.EmpManagerFkAssoc"
