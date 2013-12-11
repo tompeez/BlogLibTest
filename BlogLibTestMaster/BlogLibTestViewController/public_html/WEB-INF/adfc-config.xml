@@ -1,23 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
-  <view id="Dep">
-    <page>/Dep.jspx</page>
+  <view id="Start">
+    <page>/WEB-INF/Start.jspx</page>
   </view>
-  <view id="Emp">
-    <page>/Emp.jspx</page>
-  </view>
-  <control-flow-rule id="__1">
-    <from-activity-id id="__2">Emp</from-activity-id>
-    <control-flow-case id="__4">
-      <from-outcome id="__5">dep</from-outcome>
-      <to-activity-id id="__3">Dep</to-activity-id>
-    </control-flow-case>
-  </control-flow-rule>
-  <control-flow-rule id="__6">
-    <from-activity-id id="__7">Dep</from-activity-id>
-    <control-flow-case id="__9">
-      <from-outcome id="__10">emp</from-outcome>
-      <to-activity-id id="__8">Emp</to-activity-id>
-    </control-flow-case>
-  </control-flow-rule>
+  <managed-bean id="__11">
+    <managed-bean-name id="__14">DynamicReagionBean</managed-bean-name>
+    <managed-bean-class id="__13">de.hahn.blog.libtest.master.view.DynamicReagionBean</managed-bean-class>
+    <managed-bean-scope id="__12">view</managed-bean-scope>
+  </managed-bean>
 </adfc-config>
