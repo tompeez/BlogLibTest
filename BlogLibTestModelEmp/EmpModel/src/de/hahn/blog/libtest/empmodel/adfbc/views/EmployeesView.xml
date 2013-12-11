@@ -16,8 +16,7 @@
        Employees.SALARY, 
        Employees.COMMISSION_PCT, 
        Employees.MANAGER_ID, 
-       Employees.DEPARTMENT_ID, 
-       Employees.DUMMYTEXT2"
+       Employees.DEPARTMENT_ID"
   FromList="EMPLOYEES Employees"
   BindingStyle="OracleName"
   CustomQuery="false"
@@ -103,12 +102,6 @@
     EntityAttrName="DepartmentId"
     EntityUsage="Employees"
     AliasName="DEPARTMENT_ID"/>
-  <ViewAttribute
-    Name="Dummytext2"
-    PrecisionRule="true"
-    EntityAttrName="Dummytext2"
-    EntityUsage="Employees"
-    AliasName="DUMMYTEXT2"/>
   <ViewLinkAccessor
     Name="EmployeesView"
     ViewLink="de.hahn.blog.libtest.empmodel.adfbc.views.EmpManagerFkLink"

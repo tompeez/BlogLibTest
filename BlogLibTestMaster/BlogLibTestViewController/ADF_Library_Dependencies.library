@@ -5,10 +5,15 @@
          <Item path="../../adfLibs/adflibEmpModel.jar" jar-entry=""/>
          <Item path="../../adfLibs/adflibDepModel.jar" jar-entry=""/>
          <Item path="../../adfLibs/adflibRegionModel.jar" jar-entry=""/>
+         <Item path="../../adfLibs/adflibCommon.jar" jar-entry=""/>
       </entries>
    </classPath>
-   <docPath/>
+   <docPath>
+      <entries class="[Ljava.net.URL;"/>
+   </docPath>
    <locked>true</locked>
    <name>ADF Library Dependencies</name>
-   <sourcePath/>
+   <sourcePath>
+      <entries class="[Ljava.net.URL;"/>
+   </sourcePath>
 </JLibraryNode>

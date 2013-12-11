@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view>
+    <af:document id="d1">
+      <af:form id="f1">
+        <af:panelStretchLayout topHeight="50px" id="psl1">
+          <f:facet name="top">
+            <af:panelGroupLayout layout="horizontal" xmlns:af="http://xmlns.oracle.com/adf/faces/rich" id="pgl2" styleClass="AFStretchWidth">
+              <af:outputText value="LibTest and Security Test" id="ot1" inlineStyle="font-size:x-large;"/>
+              <af:spacer width="500" height="10" id="s1"/>
+              <af:panelGroupLayout id="ptpgl3" layout="horizontal">
+                <af:outputText value="Welcome #{securityContext.userName}!" inlineStyle="font-weight:bold; width:100px" id="ptot2"
+                               rendered="#{securityContext.authenticated}"/>
+                <af:goLink text='#{securityContext.authenticated ? "Logout" : "Login"}'
+                           destination='#{securityContext.authenticated ?                         "/adfAuthentication?logout=true&amp;end_url=/faces/Start" :                              "/adfAuthentication?success_url=/faces/Start"}'
+                           inlineStyle="font-size:14px; font-weight:bold;"/>
+                <f:facet name="separator">
+                  <af:spacer width="5" height="10" id="pts1"/>
+                </f:facet>
+              </af:panelGroupLayout>
+            </af:panelGroupLayout>
+          </f:facet>
+          <f:facet name="center">
+            <!-- id="af_twocol_left_full_header_splitandstretched"   -->
+            <af:panelSplitter orientation="horizontal" splitterPosition="100" id="ps1">
+              <f:facet name="first">
+                <af:panelAccordion id="pa1">
+                  <af:showDetailItem text="Work" id="sdi1">
+                    <af:commandLink text="Departments" action="#{viewScope.DynamicReagionBean.departmentbtf}" id="cl1"/>
+                    <af:commandLink text="Employees" action="#{viewScope.DynamicReagionBean.employeebtf}" id="cl2"/>
+                  </af:showDetailItem>
+                  <af:showDetailItem text="Admin" id="sdi2" visible="#{securityContext.userInRole['libtest-Administrator']}">
+                    <af:commandLink text="Regions" action="#{viewScope.DynamicReagionBean.regionbtf}" id="cl3"/>
+                  </af:showDetailItem>
+                </af:panelAccordion>
+              </f:facet>
+              <f:facet name="second">
+                <af:panelStretchLayout id="psl2">
+                  <f:facet name="bottom"/>
+                  <f:facet name="center">
+                    <af:region value="#{bindings.dynamicRegion1.regionModel}" id="r1" partialTriggers="::cl1 ::cl2 ::cl3"/>
+                  </f:facet>
+                  <f:facet name="start"/>
+                  <f:facet name="end"/>
+                  <f:facet name="top"/>
+                </af:panelStretchLayout>
+              </f:facet>
+            </af:panelSplitter>
+          </f:facet>
+          <f:facet name="start"/>
+        </af:panelStretchLayout>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

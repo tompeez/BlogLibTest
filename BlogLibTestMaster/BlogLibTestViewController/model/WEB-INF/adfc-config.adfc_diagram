@@ -3,53 +3,18 @@
    <OverallProperties
       id="OverallProperties1"/>
    <View
-      id="View2">
+      id="View6">
       <property
-         name="activityId">Dep</property>
+         name="activityId">Start</property>
       <property
-         name="page">/Dep.jspx</property>
+         name="page">/WEB-INF/Start.jspx</property>
       <property
-         name="description">&lt;html>&lt;p>&lt;b>Dep&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
-      <property
-         name="exceptionHandler">false</property>
-      <property
-         name="y">233.29883</property>
-      <property
-         name="x">582.0</property>
-   </View>
-   <View
-      id="View3">
-      <property
-         name="activityId">Emp</property>
-      <property
-         name="page">/Emp.jspx</property>
-      <property
-         name="description">&lt;html>&lt;p>&lt;b>Emp&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+         name="description">&lt;html>&lt;p>&lt;b>Start&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
          name="exceptionHandler">false</property>
       <property
-         name="y">215.29883</property>
+         name="y">334.29883</property>
       <property
-         name="x">724.0</property>
+         name="x">238.0</property>
    </View>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase4"
-      from="View3"
-      to="View2">
-      <property
-         name="fromOutcome">dep</property>
-      <property
-         name="sdm:polyPoints">L46,681.96405,211.44824,623.0,229.44824,R46</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase5"
-      from="View2"
-      to="View3">
-      <property
-         name="fromOutcome">emp</property>
-      <property
-         name="sdm:polyPoints">R54,624.0274,236.44824,683.0,218.44824,L54</property>
-   </ControlFlowCase>
 </SDM>

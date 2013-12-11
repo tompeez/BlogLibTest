@@ -2,13 +2,15 @@
 <Application xmlns="http://xmlns.oracle.com/adfm/application" version="11.1.1.64.93" id="DataBindings" SeparateXMLFiles="false"
              Package="de.hahn.blog.libtest.master.view"
              ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding" className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
+    <dtfactory className="oracle.adf.controller.internal.dtrt.binding.BindingDTObjectFactory"/>
+  </definitionFactories>
   <pageMap>
-    <page path="/Dep.jspx" usageId="de_hahn_blog_libtest_master_view_DepPageDef"/>
-    <page path="/Emp.jspx" usageId="de_hahn_blog_libtest_master_view_EmpPageDef"/>
+    <page path="/WEB-INF/Start.jspx" usageId="de_hahn_blog_libtest_master_view_StartPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
-    <page id="de_hahn_blog_libtest_master_view_DepPageDef" path="de.hahn.blog.libtest.master.view.pageDefs.DepPageDef"/>
-    <page id="de_hahn_blog_libtest_master_view_EmpPageDef" path="de.hahn.blog.libtest.master.view.pageDefs.EmpPageDef"/>
+    <page id="de_hahn_blog_libtest_master_view_StartPageDef" path="de.hahn.blog.libtest.master.view.pageDefs.StartPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="DepAppModuleDataControl" Package="de.hahn.blog.libtest.depmodel.adfbc.service"

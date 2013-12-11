@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="11.1.1.64.93" id="DataBindings" SeparateXMLFiles="false"
+             Package="de.hahn.blog.libtest.department.view" ClientType="Generic">
+  <pageMap>
+    <page path="/WEB-INF/de/hahn/blog/libtest/department/Departments.jsff" usageId="de_hahn_blog_libtest_department_view_DepartmentsPageDef"/>
+    <page path="/WEB-INF/de/hahn/blog/libtest/department/Department.jsff" usageId="de_hahn_blog_libtest_department_view_DepartmentPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="de_hahn_blog_libtest_department_view_DepartmentsPageDef" path="de.hahn.blog.libtest.department.DepartmentsPageDef"/>
+    <page id="de_hahn_blog_libtest_department_view_DepartmentPageDef" path="de.hahn.blog.libtest.department.DepartmentPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="DepAppModuleDataControl" Package="de.hahn.blog.libtest.depmodel.adfbc.service"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true" SupportsFindMode="true" SupportsRangesize="true"
+                     SupportsResetState="true" SupportsSortCollection="true" Configuration="DepAppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

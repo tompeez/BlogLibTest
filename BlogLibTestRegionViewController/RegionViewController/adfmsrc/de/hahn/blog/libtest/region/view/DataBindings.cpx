@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="11.1.1.64.93" id="DataBindings" SeparateXMLFiles="false"
+             Package="de.hahn.blog.libtest.region.view"
+             ClientType="Generic">
+  <pageMap>
+    <page path="/WEB-INF/de/hahn/blog/libtest/region/regions.jsff" usageId="de_hahn_blog_libtest_region_view_regionsPageDef"/>
+    <page path="/WEB-INF/de/hahn/blog/libtest/region/region-btf.xml#region-btf@helloRegionModule"
+          usageId="de_hahn_blog_libtest_region_view_regionsPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="de_hahn_blog_libtest_region_view_regionsPageDef" path="de.hahn.blog.libtest.region.regionsPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="RegionModelAppModuleDataControl" Package="de.hahn.blog.libtest.regionmodel.adfbc.service"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true" SupportsFindMode="true" SupportsRangesize="true"
+                     SupportsResetState="true" SupportsSortCollection="true" Configuration="RegionModelAppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

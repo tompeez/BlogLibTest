@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="11.1.1.64.93" id="regionsPageDef" Package="de.hahn.blog.libtest.region">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables">
+      <variable Type="java.lang.String" Name="helloRegionModule_return" IsQueriable="false" IsUpdateable="0"
+                DefaultValue="${bindings.helloRegionModule.result}"/>
+      <variable Type="java.lang.String" Name="helloRegionModule_param" IsQueriable="false"/>
+    </variableIterator>
+    <iterator Binds="RegionsView1" RangeSize="25" DataControl="RegionModelAppModuleDataControl" id="RegionsView1Iterator"/>
+    <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" Binds="RegionsView1Iterator"
+                  id="ImplicitViewCriteriaQuery"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="variables" id="param">
+      <AttrNames>
+        <Item Value="helloRegionModule_param"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="return">
+      <AttrNames>
+        <Item Value="helloRegionModule_return"/>
+      </AttrNames>
+    </attributeValues>
+    <tree IterBinding="RegionsView1Iterator" id="RegionsView1">
+      <nodeDefinition DefName="de.hahn.blog.libtest.regionmodel.adfbc.views.RegionsView" Name="RegionsView10">
+        <AttrNames>
+          <Item Value="RegionId"/>
+          <Item Value="RegionName"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <methodAction id="helloRegionModule" RequiresUpdateModel="true" Action="invokeMethod" MethodName="helloRegionModule" IsViewObjectMethod="false"
+                  DataControl="RegionModelAppModuleDataControl" InstanceName="RegionModelAppModuleDataControl.dataProvider"
+                  ReturnName="data.RegionModelAppModuleDataControl.methodResults.helloRegionModule_RegionModelAppModuleDataControl_dataProvider_helloRegionModule_result">
+      <NamedData NDName="param" NDValue="Region VC" NDType="java.lang.String"/>
+    </methodAction>
+  </bindings>
+</pageDefinition>

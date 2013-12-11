@@ -1,6 +1,6 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <References xmlns="http://xmlns.oracle.com/adf/jndi">
-   <Reference name="HRConn" className="oracle.jdeveloper.db.adapter.DatabaseProvider" partial="true" manageInOracleEnterpriseManager="true" deployable="true" xmlns="">
+   <Reference name="HRConn" className="oracle.jdeveloper.db.adapter.DatabaseProvider" credentialStoreKey="HRConn" xmlns="">
       <Factory className="oracle.jdeveloper.db.adapter.DatabaseProviderFactory"/>
       <RefAddresses>
          <StringRefAddr addrType="subtype">
@@ -9,6 +9,7 @@
          <StringRefAddr addrType="user">
             <Contents>hr</Contents>
          </StringRefAddr>
+         <SecureRefAddr addrType="password"/>
          <StringRefAddr addrType="DeployPassword">
             <Contents>true</Contents>
          </StringRefAddr>
