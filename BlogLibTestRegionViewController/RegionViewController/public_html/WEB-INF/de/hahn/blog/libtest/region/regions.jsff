@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:af="http://xmlns.oracle.com/adf/faces/rich" xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelStretchLayout id="psl1">
+    <f:facet name="center">
+      <af:panelGroupLayout layout="vertical" id="pgl1">
+        <af:panelHeader text="Regions" id="ph1">
+          <af:query id="qryId1" headerText="Search" disclosed="true" value="#{bindings.ImplicitViewCriteriaQuery.queryDescriptor}"
+                    model="#{bindings.ImplicitViewCriteriaQuery.queryModel}" queryListener="#{bindings.ImplicitViewCriteriaQuery.processQuery}"
+                    queryOperationListener="#{bindings.ImplicitViewCriteriaQuery.processQueryOperation}" resultComponentId="::resId1"/>
+        </af:panelHeader>
+        <af:table value="#{bindings.RegionsView1.collectionModel}" var="row" rows="#{bindings.RegionsView1.rangeSize}"
+                  emptyText="#{bindings.RegionsView1.viewable ? 'No data to display.' : 'Access Denied.'}" fetchSize="#{bindings.RegionsView1.rangeSize}"
+                  rowBandingInterval="0" selectedRowKeys="#{bindings.RegionsView1.collectionModel.selectedRow}"
+                  selectionListener="#{bindings.RegionsView1.collectionModel.makeCurrent}" rowSelection="single" id="resId1">
+          <af:column sortProperty="#{bindings.RegionsView1.hints.RegionId.name}" sortable="true" headerText="#{bindings.RegionsView1.hints.RegionId.label}"
+                     id="resId1c1">
+            <af:outputText value="#{row.RegionId}" id="ot2">
+              <af:convertNumber groupingUsed="false" pattern="#{bindings.RegionsView1.hints.RegionId.format}"/>
+            </af:outputText>
+          </af:column>
+          <af:column sortProperty="#{bindings.RegionsView1.hints.RegionName.name}" sortable="true" headerText="#{bindings.RegionsView1.hints.RegionName.label}"
+                     id="resId1c2">
+            <af:outputText value="#{row.RegionName}" id="ot1"/>
+          </af:column>
+        </af:table>
+      </af:panelGroupLayout>
+      <!-- id="af_one_column_stretched"   -->
+    </f:facet>
+    <f:facet name="top">
+      <af:panelFormLayout id="pfl1">
+        <af:inputText value="#{bindings.return.inputValue}" simple="true" required="#{bindings.return.hints.mandatory}"
+                      columns="#{bindings.return.hints.displayWidth}" maximumLength="#{bindings.return.hints.precision}"
+                      shortDesc="#{bindings.return.hints.tooltip}" id="it2">
+          <f:validator binding="#{bindings.return.validator}"/>
+        </af:inputText>
+      </af:panelFormLayout>
+    </f:facet>
+  </af:panelStretchLayout>
+</jsp:root>

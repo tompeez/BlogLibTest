@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:af="http://xmlns.oracle.com/adf/faces/rich" xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelStretchLayout id="psl1">
+    <f:facet name="center">
+      <af:panelFormLayout id="pfl1">
+        <af:panelLabelAndMessage label="#{bindings.DepartmentId.hints.label}" id="plam4">
+          <af:outputText value="#{bindings.DepartmentId.inputValue}" id="ot3">
+            <af:convertNumber groupingUsed="false" pattern="#{bindings.DepartmentId.format}"/>
+          </af:outputText>
+        </af:panelLabelAndMessage>
+        <af:panelLabelAndMessage label="#{bindings.DepartmentName.hints.label}" id="plam3">
+          <af:outputText value="#{bindings.DepartmentName.inputValue}" id="ot2"/>
+        </af:panelLabelAndMessage>
+        <af:panelLabelAndMessage label="#{bindings.ManagerId.hints.label}" id="plam1">
+          <af:outputText value="#{bindings.ManagerId.inputValue}" id="ot1">
+            <af:convertNumber groupingUsed="false" pattern="#{bindings.ManagerId.format}"/>
+          </af:outputText>
+        </af:panelLabelAndMessage>
+        <af:panelLabelAndMessage label="#{bindings.LocationId.hints.label}" id="plam2">
+          <af:outputText value="#{bindings.LocationId.inputValue}" id="ot4">
+            <af:convertNumber groupingUsed="false" pattern="#{bindings.LocationId.format}"/>
+          </af:outputText>
+        </af:panelLabelAndMessage>
+        <f:facet name="footer">
+          <af:commandButton text="Back" id="cb1" action="back"/>
+        </f:facet>
+      </af:panelFormLayout>
+      <!-- id="af_one_column_stretched"   -->
+    </f:facet>
+  </af:panelStretchLayout>
+</jsp:root>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="region-btf">
+    <default-activity id="__1">helloRegionModule</default-activity>
+    <view id="regions">
+      <page>/WEB-INF/de/hahn/blog/libtest/region/regions.jsff</page>
+    </view>
+    <method-call id="helloRegionModule">
+      <method>#{bindings.helloRegionModule.execute}</method>
+      <outcome id="__2">
+        <fixed-outcome>helloRegionModule</fixed-outcome>
+      </outcome>
+    </method-call>
+    <control-flow-rule id="__3">
+      <from-activity-id id="__4">helloRegionModule</from-activity-id>
+      <control-flow-case id="__5">
+        <from-outcome id="__6">helloRegionModule</from-outcome>
+        <to-activity-id id="__7">regions</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

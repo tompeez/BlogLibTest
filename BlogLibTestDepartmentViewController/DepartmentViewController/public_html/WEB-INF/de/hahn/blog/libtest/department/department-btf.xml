@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="department-btf">
+    <default-activity id="__1">Departments</default-activity>
+    <view id="Departments">
+      <page>/WEB-INF/de/hahn/blog/libtest/department/Departments.jsff</page>
+    </view>
+    <view id="Department">
+      <page>/WEB-INF/de/hahn/blog/libtest/department/Department.jsff</page>
+    </view>
+    <control-flow-rule id="__2">
+      <from-activity-id id="__3">Departments</from-activity-id>
+      <control-flow-case id="__4">
+        <from-outcome id="__6">GoDetail</from-outcome>
+        <to-activity-id id="__5">Department</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__7">
+      <from-activity-id id="__8">Department</from-activity-id>
+      <control-flow-case id="__9">
+        <from-outcome id="__11">back</from-outcome>
+        <to-activity-id id="__10">Departments</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

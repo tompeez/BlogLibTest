@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="employee-btf">
+    <default-activity id="__1">Employees</default-activity>
+    <view id="Employees">
+      <page>/WEB-INF/de/hahn/blog/libtest/employee/Employees.jsff</page>
+    </view>
+    <view id="Employee">
+      <page>/WEB-INF/de/hahn/blog/libtest/employee/Employee.jsff</page>
+    </view>
+    <control-flow-rule id="__2">
+      <from-activity-id id="__3">Employees</from-activity-id>
+      <control-flow-case id="__5">
+        <from-outcome id="__6">GoDetail</from-outcome>
+        <to-activity-id id="__4">Employee</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__7">
+      <from-activity-id id="__8">Employee</from-activity-id>
+      <control-flow-case id="__10">
+        <from-outcome id="__11">back</from-outcome>
+        <to-activity-id id="__9">Employees</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>
