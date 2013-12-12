@@ -10,21 +10,23 @@
         </af:panelLabelAndMessage>
         <af:inputText value="#{bindings.DepartmentName.inputValue}" label="#{bindings.DepartmentName.hints.label}"
                       required="#{bindings.DepartmentName.hints.mandatory}" columns="#{bindings.DepartmentName.hints.displayWidth}"
-                      maximumLength="#{bindings.DepartmentName.hints.precision}" shortDesc="#{bindings.DepartmentName.hints.tooltip}" id="it3">
+                      maximumLength="#{bindings.DepartmentName.hints.precision}" shortDesc="#{bindings.DepartmentName.hints.tooltip}" id="it3"
+                      readOnly="#{securityContext.userInRole['libtest-Administration']}">
           <f:validator binding="#{bindings.DepartmentName.validator}"/>
         </af:inputText>
         <af:inputText value="#{bindings.ManagerId.inputValue}" label="#{bindings.ManagerId.hints.label}" required="#{bindings.ManagerId.hints.mandatory}"
                       columns="#{bindings.ManagerId.hints.displayWidth}" maximumLength="#{bindings.ManagerId.hints.precision}"
-                      shortDesc="#{bindings.ManagerId.hints.tooltip}" id="it1">
+                      shortDesc="#{bindings.ManagerId.hints.tooltip}" id="it1" readOnly="#{securityContext.userInRole['libtest-Administration']}">
           <f:validator binding="#{bindings.ManagerId.validator}"/>
           <af:convertNumber groupingUsed="false" pattern="#{bindings.ManagerId.format}"/>
         </af:inputText>
         <af:inputText value="#{bindings.LocationId.inputValue}" label="#{bindings.LocationId.hints.label}" required="#{bindings.LocationId.hints.mandatory}"
                       columns="#{bindings.LocationId.hints.displayWidth}" maximumLength="#{bindings.LocationId.hints.precision}"
-                      shortDesc="#{bindings.LocationId.hints.tooltip}" id="it2">
+                      shortDesc="#{bindings.LocationId.hints.tooltip}" id="it2" readOnly="#{securityContext.userInRole['libtest-Administrator']}">
           <f:validator binding="#{bindings.LocationId.validator}"/>
           <af:convertNumber groupingUsed="false" pattern="#{bindings.LocationId.format}"/>
         </af:inputText>
+        <af:outputText value="Sercurity:  #{securityContext.userName} - #{securityContext.userInRole['libtest-Administrator']} " id="ot2"/>
         <f:facet name="footer">
           <af:commandButton text="Submit" id="cb1" action="back"/>
         </f:facet>
