@@ -3,26 +3,32 @@
   <af:panelStretchLayout id="psl1">
     <f:facet name="center">
       <af:panelFormLayout id="pfl1">
-        <af:panelLabelAndMessage label="#{bindings.DepartmentId.hints.label}" id="plam4">
-          <af:outputText value="#{bindings.DepartmentId.inputValue}" id="ot3">
+        <af:panelLabelAndMessage label="#{bindings.DepartmentId.hints.label}" id="plam1">
+          <af:outputText value="#{bindings.DepartmentId.inputValue}" id="ot1">
             <af:convertNumber groupingUsed="false" pattern="#{bindings.DepartmentId.format}"/>
           </af:outputText>
         </af:panelLabelAndMessage>
-        <af:panelLabelAndMessage label="#{bindings.DepartmentName.hints.label}" id="plam3">
-          <af:outputText value="#{bindings.DepartmentName.inputValue}" id="ot2"/>
-        </af:panelLabelAndMessage>
-        <af:panelLabelAndMessage label="#{bindings.ManagerId.hints.label}" id="plam1">
-          <af:outputText value="#{bindings.ManagerId.inputValue}" id="ot1">
-            <af:convertNumber groupingUsed="false" pattern="#{bindings.ManagerId.format}"/>
-          </af:outputText>
-        </af:panelLabelAndMessage>
-        <af:panelLabelAndMessage label="#{bindings.LocationId.hints.label}" id="plam2">
-          <af:outputText value="#{bindings.LocationId.inputValue}" id="ot4">
-            <af:convertNumber groupingUsed="false" pattern="#{bindings.LocationId.format}"/>
-          </af:outputText>
-        </af:panelLabelAndMessage>
+        <af:inputText value="#{bindings.DepartmentName.inputValue}" label="#{bindings.DepartmentName.hints.label}"
+                      required="#{bindings.DepartmentName.hints.mandatory}" columns="#{bindings.DepartmentName.hints.displayWidth}"
+                      maximumLength="#{bindings.DepartmentName.hints.precision}" shortDesc="#{bindings.DepartmentName.hints.tooltip}" id="it3"
+                      readOnly="#{securityContext.userInRole['libtest-Administration']}">
+          <f:validator binding="#{bindings.DepartmentName.validator}"/>
+        </af:inputText>
+        <af:inputText value="#{bindings.ManagerId.inputValue}" label="#{bindings.ManagerId.hints.label}" required="#{bindings.ManagerId.hints.mandatory}"
+                      columns="#{bindings.ManagerId.hints.displayWidth}" maximumLength="#{bindings.ManagerId.hints.precision}"
+                      shortDesc="#{bindings.ManagerId.hints.tooltip}" id="it1" readOnly="#{securityContext.userInRole['libtest-Administration']}">
+          <f:validator binding="#{bindings.ManagerId.validator}"/>
+          <af:convertNumber groupingUsed="false" pattern="#{bindings.ManagerId.format}"/>
+        </af:inputText>
+        <af:inputText value="#{bindings.LocationId.inputValue}" label="#{bindings.LocationId.hints.label}" required="#{bindings.LocationId.hints.mandatory}"
+                      columns="#{bindings.LocationId.hints.displayWidth}" maximumLength="#{bindings.LocationId.hints.precision}"
+                      shortDesc="#{bindings.LocationId.hints.tooltip}" id="it2" readOnly="#{securityContext.userInRole['libtest-Administrator']}">
+          <f:validator binding="#{bindings.LocationId.validator}"/>
+          <af:convertNumber groupingUsed="false" pattern="#{bindings.LocationId.format}"/>
+        </af:inputText>
+        <af:outputText value="Sercurity:  #{securityContext.userName} - #{securityContext.userInRole['libtest-Administrator']} " id="ot2"/>
         <f:facet name="footer">
-          <af:commandButton text="Back" id="cb1" action="back"/>
+          <af:commandButton text="Submit" id="cb1" action="back"/>
         </f:facet>
       </af:panelFormLayout>
       <!-- id="af_one_column_stretched"   -->

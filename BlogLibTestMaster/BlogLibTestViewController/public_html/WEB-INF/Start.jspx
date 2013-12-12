@@ -7,7 +7,20 @@
       <af:form id="f1">
         <af:panelStretchLayout topHeight="50px" id="psl1">
           <f:facet name="top">
-            <af:outputText value="LibTest and Security Test" id="ot1" inlineStyle="font-size:x-large;"/>
+            <af:panelGroupLayout layout="horizontal" xmlns:af="http://xmlns.oracle.com/adf/faces/rich" id="pgl2" styleClass="AFStretchWidth">
+              <af:outputText value="LibTest and Security Test" id="ot1" inlineStyle="font-size:x-large;"/>
+              <af:spacer width="500" height="10" id="s1"/>
+              <af:panelGroupLayout id="ptpgl3" layout="horizontal">
+                <af:outputText value="Welcome #{securityContext.userName}!" inlineStyle="font-weight:bold; width:100px" id="ptot2"
+                               rendered="#{securityContext.authenticated}"/>
+                <af:goLink text='#{securityContext.authenticated ? "Logout" : "Login"}'
+                           destination='#{securityContext.authenticated ?                         "/adfAuthentication?logout=true&amp;end_url=/faces/Start" :                              "/adfAuthentication?success_url=/faces/Start"}'
+                           inlineStyle="font-size:14px; font-weight:bold;"/>
+                <f:facet name="separator">
+                  <af:spacer width="5" height="10" id="pts1"/>
+                </f:facet>
+              </af:panelGroupLayout>
+            </af:panelGroupLayout>
           </f:facet>
           <f:facet name="center">
             <!-- id="af_twocol_left_full_header_splitandstretched"   -->
@@ -18,7 +31,7 @@
                     <af:commandLink text="Departments" action="#{viewScope.DynamicReagionBean.departmentbtf}" id="cl1"/>
                     <af:commandLink text="Employees" action="#{viewScope.DynamicReagionBean.employeebtf}" id="cl2"/>
                   </af:showDetailItem>
-                  <af:showDetailItem text="Admin" id="sdi2">
+                  <af:showDetailItem text="Admin" id="sdi2" visible="#{securityContext.userInRole['libtest-Administrator']}">
                     <af:commandLink text="Regions" action="#{viewScope.DynamicReagionBean.regionbtf}" id="cl3"/>
                   </af:showDetailItem>
                 </af:panelAccordion>
@@ -36,6 +49,7 @@
               </f:facet>
             </af:panelSplitter>
           </f:facet>
+          <f:facet name="start"/>
         </af:panelStretchLayout>
       </af:form>
     </af:document>

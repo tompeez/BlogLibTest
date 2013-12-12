@@ -37,5 +37,11 @@
       </af:panelGroupLayout>
       <!-- id="af_one_column_stretched"   -->
     </f:facet>
+    <f:facet name="bottom">
+      <af:panelGroupLayout layout="horizontal" xmlns:af="http://xmlns.oracle.com/adf/faces/rich" id="pgl2">
+        <af:commandButton text="Cancel" id="cb2" action="Cancel"/>
+        <af:commandButton text="Save" id="cb1" action="Save"/>
+      </af:panelGroupLayout>
+    </f:facet>
   </af:panelStretchLayout>
 </jsp:root>
