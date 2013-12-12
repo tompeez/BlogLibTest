@@ -2,6 +2,12 @@
 <adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
   <task-flow-definition id="employee-btf">
     <default-activity id="__1">Employees</default-activity>
+    <transaction id="__13">
+      <requires-transaction/>
+    </transaction>
+    <data-control-scope id="__12">
+      <shared/>
+    </data-control-scope>
     <view id="Employees">
       <page>/WEB-INF/de/hahn/blog/libtest/employee/Employees.jsff</page>
     </view>

@@ -14,7 +14,7 @@
                 <af:outputText value="Welcome #{securityContext.userName}!" inlineStyle="font-weight:bold; width:100px" id="ptot2"
                                rendered="#{securityContext.authenticated}"/>
                 <af:goLink text='#{securityContext.authenticated ? "Logout" : "Login"}'
-                           destination='#{securityContext.authenticated ?                         "/adfAuthentication?logout=true&amp;end_url=/faces/login.html" :                              "/adfAuthentication?success_url=/faces/Start"}'
+                           destination='#{securityContext.authenticated ?                         "/adfAuthentication?logout=true&amp;end_url=/faces/Start" :                              "/adfAuthentication?success_url=/faces/Start"}'
                            inlineStyle="font-size:14px; font-weight:bold;"/>
                 <f:facet name="separator">
                   <af:spacer width="5" height="10" id="pts1"/>
@@ -31,7 +31,7 @@
                     <af:commandLink text="Departments" action="#{viewScope.DynamicReagionBean.departmentbtf}" id="cl1"/>
                     <af:commandLink text="Employees" action="#{viewScope.DynamicReagionBean.employeebtf}" id="cl2"/>
                   </af:showDetailItem>
-                  <af:showDetailItem text="Admin" id="sdi2" visible="#{securityContext.userInRole['lib-Administrator']}">
+                  <af:showDetailItem text="Admin" id="sdi2" visible="#{securityContext.userInRole['libtest-Administrator']}">
                     <af:commandLink text="Regions" action="#{viewScope.DynamicReagionBean.regionbtf}" id="cl3"/>
                   </af:showDetailItem>
                 </af:panelAccordion>

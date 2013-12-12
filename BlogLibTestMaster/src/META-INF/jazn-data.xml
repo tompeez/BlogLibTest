@@ -39,24 +39,49 @@
           <name>Administrator</name>
           <display-name>Administrator</display-name>
           <description>Administrator</description>
+          <members>
+            <member>
+              <type>user</type>
+              <name>adminuser</name>
+            </member>
+            <member>
+              <type>user</type>
+              <name>timo</name>
+            </member>
+          </members>
         </role>
         <role>
           <name>Validator</name>
           <display-name>Validator</display-name>
           <description>Validator</description>
-          <members/>
+          <members>
+            <member>
+              <type>user</type>
+              <name>validuser</name>
+            </member>
+          </members>
         </role>
         <role>
           <name>AML</name>
           <display-name>AML</display-name>
           <description>AML</description>
-          <members/>
+          <members>
+            <member>
+              <type>user</type>
+              <name>almuser</name>
+            </member>
+          </members>
         </role>
         <role>
           <name>Scanner</name>
           <display-name>Scanner</display-name>
           <description>Scanner</description>
-          <members/>
+          <members>
+            <member>
+              <type>user</type>
+              <name>scanuser</name>
+            </member>
+          </members>
         </role>
       </roles>
     </realm>
@@ -67,7 +92,7 @@
         <name>BlogLibTestMaster</name>
         <app-roles>
           <app-role>
-            <name>lib-Scanner</name>
+            <name>libtest-Scanner</name>
             <class>oracle.security.jps.service.policystore.ApplicationRole</class>
             <display-name>Scanner</display-name>
             <description>Scanner</description>
@@ -77,13 +102,21 @@
                 <class>oracle.security.jps.internal.core.principals.JpsXmlEnterpriseRoleImpl</class>
               </member>
               <member>
-                <name>scanuser</name>
-                <class>oracle.security.jps.internal.core.principals.JpsXmlUserImpl</class>
+                <name>Administrator</name>
+                <class>oracle.security.jps.internal.core.principals.JpsXmlEnterpriseRoleImpl</class>
+              </member>
+              <member>
+                <name>AML</name>
+                <class>oracle.security.jps.internal.core.principals.JpsXmlEnterpriseRoleImpl</class>
+              </member>
+              <member>
+                <name>Validator</name>
+                <class>oracle.security.jps.internal.core.principals.JpsXmlEnterpriseRoleImpl</class>
               </member>
             </members>
           </app-role>
           <app-role>
-            <name>lib-AML</name>
+            <name>libtest-AML</name>
             <class>oracle.security.jps.service.policystore.ApplicationRole</class>
             <display-name>AML</display-name>
             <description>AML</description>
@@ -93,13 +126,13 @@
                 <class>oracle.security.jps.internal.core.principals.JpsXmlEnterpriseRoleImpl</class>
               </member>
               <member>
-                <name>almuser</name>
-                <class>oracle.security.jps.internal.core.principals.JpsXmlUserImpl</class>
+                <name>Administrator</name>
+                <class>oracle.security.jps.internal.core.principals.JpsXmlEnterpriseRoleImpl</class>
               </member>
             </members>
           </app-role>
           <app-role>
-            <name>lib-Validator</name>
+            <name>libtest-Validator</name>
             <class>oracle.security.jps.service.policystore.ApplicationRole</class>
             <display-name>Validator</display-name>
             <description>Validator</description>
@@ -109,13 +142,17 @@
                 <class>oracle.security.jps.internal.core.principals.JpsXmlEnterpriseRoleImpl</class>
               </member>
               <member>
-                <name>validuser</name>
-                <class>oracle.security.jps.internal.core.principals.JpsXmlUserImpl</class>
+                <name>Administrator</name>
+                <class>oracle.security.jps.internal.core.principals.JpsXmlEnterpriseRoleImpl</class>
+              </member>
+              <member>
+                <name>AML</name>
+                <class>oracle.security.jps.internal.core.principals.JpsXmlEnterpriseRoleImpl</class>
               </member>
             </members>
           </app-role>
           <app-role>
-            <name>lib-Administrator</name>
+            <name>libtest-Administrator</name>
             <class>oracle.security.jps.service.policystore.ApplicationRole</class>
             <display-name>Administrator</display-name>
             <description>Administrator</description>
@@ -123,14 +160,6 @@
               <member>
                 <name>Administrator</name>
                 <class>oracle.security.jps.internal.core.principals.JpsXmlEnterpriseRoleImpl</class>
-              </member>
-              <member>
-                <name>adminuser</name>
-                <class>oracle.security.jps.internal.core.principals.JpsXmlUserImpl</class>
-              </member>
-              <member>
-                <name>timo</name>
-                <class>oracle.security.jps.internal.core.principals.JpsXmlUserImpl</class>
               </member>
             </members>
           </app-role>
@@ -155,7 +184,7 @@
             <grantee>
               <principals>
                 <principal>
-                  <name>lib-Administrator</name>
+                  <name>libtest-Administrator</name>
                   <class>oracle.security.jps.service.policystore.ApplicationRole</class>
                 </principal>
               </principals>
@@ -164,6 +193,11 @@
               <permission>
                 <class>oracle.adf.controller.security.TaskFlowPermission</class>
                 <name>/WEB-INF/de/hahn/blog/libtest/region/region-btf.xml#region-btf</name>
+                <actions>view</actions>
+              </permission>
+              <permission>
+                <class>oracle.adf.share.security.authorization.RegionPermission</class>
+                <name>de.hahn.blog.libtest.master.view.pageDefs.StartPageDef</name>
                 <actions>view</actions>
               </permission>
             </permissions>
@@ -194,7 +228,41 @@
             <grantee>
               <principals>
                 <principal>
-                  <name>lib-Scanner</name>
+                  <name>libtest-Scanner</name>
+                  <class>oracle.security.jps.service.policystore.ApplicationRole</class>
+                </principal>
+              </principals>
+            </grantee>
+            <permissions>
+              <permission>
+                <class>oracle.adf.share.security.authorization.RegionPermission</class>
+                <name>de.hahn.blog.libtest.master.view.pageDefs.StartPageDef</name>
+                <actions>view</actions>
+              </permission>
+            </permissions>
+          </grant>
+          <grant>
+            <grantee>
+              <principals>
+                <principal>
+                  <name>libtest-AML</name>
+                  <class>oracle.security.jps.service.policystore.ApplicationRole</class>
+                </principal>
+              </principals>
+            </grantee>
+            <permissions>
+              <permission>
+                <class>oracle.adf.share.security.authorization.RegionPermission</class>
+                <name>de.hahn.blog.libtest.master.view.pageDefs.StartPageDef</name>
+                <actions>view</actions>
+              </permission>
+            </permissions>
+          </grant>
+          <grant>
+            <grantee>
+              <principals>
+                <principal>
+                  <name>libtest-Validator</name>
                   <class>oracle.security.jps.service.policystore.ApplicationRole</class>
                 </principal>
               </principals>
