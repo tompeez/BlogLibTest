@@ -32,7 +32,7 @@ CVS
 
 *.log
 *.tmp
+*.lck
 tmp
-classes
 temp
-deploy
+classes
