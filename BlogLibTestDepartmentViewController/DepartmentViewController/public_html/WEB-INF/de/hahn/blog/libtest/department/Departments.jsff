@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:af="http://xmlns.oracle.com/adf/faces/rich" xmlns:f="http://java.sun.com/jsf/core">
-  <af:panelStretchLayout id="psl1">
+  <af:panelStretchLayout id="psl1" bottomHeight="49px">
     <f:facet name="center">
       <af:panelGroupLayout layout="vertical" id="pgl1">
         <af:panelHeader text="Departments" id="ph1">
@@ -39,8 +39,8 @@
     </f:facet>
     <f:facet name="bottom">
       <af:panelGroupLayout layout="horizontal" xmlns:af="http://xmlns.oracle.com/adf/faces/rich" id="pgl2">
-        <af:commandButton text="Cancel" id="cb2" action="Cancel"/>
-        <af:commandButton text="Save" id="cb1" action="Save"/>
+        <af:commandButton text="Cancel" id="cb2" action="CancelBTF" immediate="true"/>
+        <af:commandButton text="Save" id="cb1" action="SaveBTF"/>
       </af:panelGroupLayout>
     </f:facet>
   </af:panelStretchLayout>
