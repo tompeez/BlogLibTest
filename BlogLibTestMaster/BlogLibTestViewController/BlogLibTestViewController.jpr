@@ -211,7 +211,7 @@
                <value n="viewActivityId" v="tftester"/>
             </hash>
             <value n="runActiveFile" v="false"/>
-            <url n="targetURL" protocol="jar" path="file:/P:/jdeveloper/jdev/extensions/org.emg.adf.taskflowtester/org.emg.adf.AdfTaskFlowTesterRT.jar!/META-INF/adfc-config.xml"/>
+            <url n="targetURL" protocol="jar" path="file:/opt/jdev/12.1.3.0.0/Oracle/Middleware/Oracle_Home/jdeveloper/jdev/extensions/org.emg.adf.taskflowtester/org.emg.adf.AdfTaskFlowTesterRT.jar!/META-INF/adfc-config.xml"/>
          </hash>
       </hash>
       <list n="runConfigurationList">
