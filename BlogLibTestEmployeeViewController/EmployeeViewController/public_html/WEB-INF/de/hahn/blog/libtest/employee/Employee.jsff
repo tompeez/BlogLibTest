@@ -49,9 +49,6 @@
               <af:convertNumber groupingUsed="false" pattern="#{bindings.DepartmentId.format}"/>
             </af:outputText>
           </af:panelLabelAndMessage>
-          <af:panelLabelAndMessage label="#{bindings.Dummytext2.hints.label}" id="plam10">
-            <af:outputText value="#{bindings.Dummytext2.inputValue}" id="ot3"/>
-          </af:panelLabelAndMessage>
           <f:facet name="footer"/>
         </af:panelFormLayout>
         <af:table value="#{bindings.JobHistoryView2.collectionModel}" var="row" rows="#{bindings.JobHistoryView2.rangeSize}"

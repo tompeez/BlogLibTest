@@ -15,11 +15,11 @@
       <property
          name="exceptionHandler">false</property>
       <property
-         name="y">245.29883</property>
-      <property
-         name="x">533.0</property>
+         name="y">153.59766</property>
       <property
          name="pageFragment">true</property>
+      <property
+         name="x">203.0</property>
    </View>
    <View
       id="View3">
@@ -32,11 +32,11 @@
       <property
          name="exceptionHandler">false</property>
       <property
-         name="y">243.59766</property>
-      <property
-         name="x">892.0</property>
+         name="y">151.89648</property>
       <property
          name="pageFragment">true</property>
+      <property
+         name="x">562.0</property>
    </View>
    <ControlFlowCase
       islink="true"
@@ -46,7 +46,7 @@
       <property
          name="fromOutcome">GoDetail</property>
       <property
-         name="sdm:polyPoints">R46,574.0,241.44824,850.9785,239.74707,L46</property>
+         name="sdm:polyPoints">R46,244.0,149.74707,520.9785,148.0459,L46</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -56,6 +56,6 @@
       <property
          name="fromOutcome">back</property>
       <property
-         name="sdm:polyPoints">L54,851.0,246.74707,574.0215,248.44824,R54</property>
+         name="sdm:polyPoints">L54,521.0,155.0459,244.0215,156.74707,R54</property>
    </ControlFlowCase>
 </SDM>
