@@ -76,12 +76,8 @@
       </list>
    </hash>
    <hash n="oracle.jdeveloper.compiler.ant.AntConfiguration">
-      <value n="makeTarget" v="build"/>
       <url n="projectBuildfile" path="build.xml"/>
-      <list n="targetList">
-         <string v="clean"/>
-         <string v="build"/>
-      </list>
+      <list n="targetList"/>
    </hash>
    <hash n="oracle.jdeveloper.compiler.OjcConfiguration">
       <value n="internalEncoding" v="UTF-8"/>
