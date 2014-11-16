@@ -12,6 +12,7 @@ public class DummyTest {
 
     /**
      * Testmethod1
+     * Code aus einer Codereview!
      */
     public void test1() {
         System.out.println("line 1    " + this.legalName == null);
@@ -26,6 +27,7 @@ public class DummyTest {
 
     /**
      * testmethod 2
+     * Nachstellung des gofail bug (apple)
      */
     public void test2() {
         Integer err = 0;
@@ -37,11 +39,23 @@ public class DummyTest {
             fail();
         if ((err = ReadyHash(7, 2)) != 0)
             fail();
-        fail();
+            fail();
         if ((err = ReadyHash(2, -2)) != 0)
             fail();
 
         LOGGER.info("Information: OK");
+    }
+
+    /**
+     * Testmethod 3
+     */
+    public void test3() {
+        String s = "hallo";
+        if (s == "schnitz") {
+            LOGGER.info("Sollte nie zu sehen sein!");
+        }
+        LOGGER.info("Dies ist ein Test");
+
     }
 
     private void fail() {
@@ -49,9 +63,13 @@ public class DummyTest {
 
     }
 
+    /**
+     * @param args
+     */
     public static void main(String[] args) {
         DummyTest dt = new DummyTest();
         dt.test1();
         dt.test2();
+        dt.test3();
     }
 }

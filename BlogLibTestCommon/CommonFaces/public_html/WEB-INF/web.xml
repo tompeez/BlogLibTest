@@ -7,8 +7,30 @@
     <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
     <load-on-startup>1</load-on-startup>
   </servlet>
+  <servlet>
+    <servlet-name>adflibResources</servlet-name>
+    <servlet-class>oracle.adf.library.webapp.ResourceServlet</servlet-class>
+  </servlet>
   <servlet-mapping>
     <servlet-name>Faces Servlet</servlet-name>
     <url-pattern>/faces/*</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>adflibResources</servlet-name>
+    <url-pattern>/adflib/*</url-pattern>
+  </servlet-mapping>
+  <context-param>
+    <param-name>javax.faces.FACELETS_VIEW_MAPPINGS</param-name>
+    <param-value>*.jsf;*.xhtml</param-value>
+  </context-param>
+  <filter>
+    <filter-name>ADFLibraryFilter</filter-name>
+    <filter-class>oracle.adf.library.webapp.LibraryFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>ADFLibraryFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+    <dispatcher>FORWARD</dispatcher>
+    <dispatcher>REQUEST</dispatcher>
+  </filter-mapping>
 </web-app>
