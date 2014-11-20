@@ -21,8 +21,8 @@ public class DummyTest {
     }
 
     private Integer ReadyHash(Integer a, Integer b) {
-        Integer res = a.hashCode() * b.hashCode();
-        return res;
+        ;
+        return Integer.compare(a, b);
     }
 
     /**
@@ -37,9 +37,9 @@ public class DummyTest {
             fail();
         if ((err = ReadyHash(4, 2)) != 0)
             fail();
-        if ((err = ReadyHash(7, 2)) != 0)
+        if ((err = ReadyHash(7, 12)) != 0)
             fail();
-            fail();
+        fail();
         if ((err = ReadyHash(2, -2)) != 0)
             fail();
 
