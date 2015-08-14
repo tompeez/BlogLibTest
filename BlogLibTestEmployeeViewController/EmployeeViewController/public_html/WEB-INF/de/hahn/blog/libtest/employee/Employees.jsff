@@ -14,7 +14,7 @@
                   selectionListener="#{bindings.EmployeesView1.collectionModel.makeCurrent}" rowSelection="single" id="resId1" styleClass="AFStretchWidth">
           <af:column sortProperty="#{bindings.EmployeesView1.hints.EmployeeId.name}" sortable="true"
                      headerText="#{bindings.EmployeesView1.hints.EmployeeId.label}" id="resId1c1">
-            <af:commandLink text="#{row.EmployeeId}" id="cl1" action="GoDetail"/>
+            <af:commandLink text="#{row.EmployeeId}" id="cl1" action="goDetail"/>
           </af:column>
           <af:column sortProperty="#{bindings.EmployeesView1.hints.FirstName.name}" sortable="true"
                      headerText="#{bindings.EmployeesView1.hints.FirstName.label}" id="resId1c2">

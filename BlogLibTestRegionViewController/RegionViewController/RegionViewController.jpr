@@ -163,7 +163,7 @@
                <value n="viewActivityId" v="tftester"/>
             </hash>
             <value n="runActiveFile" v="false"/>
-            <url n="targetURL" protocol="jar" path="file:/P:/jdeveloper/jdev/extensions/org.emg.adf.taskflowtester/org.emg.adf.AdfTaskFlowTesterRT.jar!/META-INF/adfc-config.xml"/>
+            <url n="targetURL" protocol="jar" path="file:/opt/jdev/12.1.3.0.0/Oracle/Middleware/Oracle_Home/jdeveloper/jdev/extensions/org.emg.adf.taskflowtester/org.emg.adf.AdfTaskFlowTesterRT.jar!/META-INF/adfc-config.xml"/>
          </hash>
       </hash>
       <list n="runConfigurationList">
@@ -175,10 +175,6 @@
       <list n="exportedReferences">
          <hash>
             <value n="id" v="JSP Runtime"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="JSF 1.2"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
@@ -255,10 +251,6 @@
          </hash>
          <hash>
             <value n="id" v="ADF Faces Databinding Runtime"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="ADF EMG Task Flow Tester"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
@@ -393,10 +385,6 @@
          </hash>
          <hash>
             <value n="id" v="ADF Faces Databinding Runtime"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="ADF EMG Task Flow Tester"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>

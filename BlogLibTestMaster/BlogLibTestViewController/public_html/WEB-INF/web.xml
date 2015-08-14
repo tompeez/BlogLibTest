@@ -29,6 +29,18 @@
     <param-name>javax.faces.FACELETS_VIEW_MAPPINGS</param-name>
     <param-value>*.jsf;*.xhtml</param-value>
   </context-param>
+  <context-param>
+    <param-name>javax.faces.FACELETS_SKIP_COMMENTS</param-name>
+    <param-value>true</param-value>
+  </context-param>
+  <context-param>
+    <param-name>javax.faces.FACELETS_DECORATORS</param-name>
+    <param-value>oracle.adfinternal.view.faces.facelets.rich.AdfTagDecorator</param-value>
+  </context-param>
+  <context-param>
+    <param-name>javax.faces.FACELETS_RESOURCE_RESOLVER</param-name>
+    <param-value>oracle.adfinternal.view.faces.facelets.rich.AdfFaceletsResourceResolver</param-value>
+  </context-param>
   <filter>
     <filter-name>JpsFilter</filter-name>
     <filter-class>oracle.security.jps.ee.http.JpsFilter</filter-class>
@@ -171,6 +183,10 @@
   <mime-mapping>
     <extension>swf</extension>
     <mime-type>application/x-shockwave-flash</mime-type>
+  </mime-mapping>
+  <mime-mapping>
+    <extension>amf</extension>
+    <mime-type>application/x-amf</mime-type>
   </mime-mapping>
   <jsp-config>
     <jsp-property-group>

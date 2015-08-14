@@ -3,8 +3,8 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <iterator Binds="EmployeesView1" RangeSize="25" DataControl="EmpAppModuleDataControl" id="EmployeesView1Iterator"/>
-    <iterator Binds="JobHistoryView2" RangeSize="25" DataControl="EmpAppModuleDataControl" id="JobHistoryView2Iterator"/>
+    <iterator Binds="EmployeesView1" RangeSize="25" DataControl="EmpAppModuleDataControl" id="EmployeesView1Iterator" ChangeEventPolicy="none"/>
+    <iterator Binds="JobHistoryView2" RangeSize="25" DataControl="EmpAppModuleDataControl" id="JobHistoryView2Iterator" ChangeEventPolicy="none"/>
   </executables>
   <bindings>
     <attributeValues IterBinding="EmployeesView1Iterator" id="EmployeeId">

@@ -2,10 +2,11 @@
 <JLibraryNode nselem="JLibraryNode" class="oracle.jdeveloper.library.JLibraryNode" deployedByDefault="true" xmlns="http://xmlns.oracle.com/jdeveloper/110000jlibrarynode">
    <classPath>
       <entries>
-         <Item path="../../adfLibs/adflibEmpModel.jar" jar-entry=""/>
-         <Item path="../../adfLibs/adflibDepModel.jar" jar-entry=""/>
-         <Item path="../../adfLibs/adflibRegionModel.jar" jar-entry=""/>
          <Item path="../../adfLibs/adflibCommon.jar" jar-entry=""/>
+         <Item path="../../adfLibs/adflibDepModel.jar" jar-entry=""/>
+         <Item path="../../adfLibs/adflibEmpModel.jar" jar-entry=""/>
+         <Item path="../../adfLibs/adflibRegionModel.jar" jar-entry=""/>
+         <Item protocol="jar" path="file:/opt/jdev/12.1.3.0.0/Oracle/Middleware/Oracle_Home/oracle_common/modules/org.springframework_2.5.jar!/"/>
       </entries>
    </classPath>
    <docPath>

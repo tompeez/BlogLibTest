@@ -7,7 +7,7 @@
                 DefaultValue="${bindings.helloRegionModule.result}"/>
       <variable Type="java.lang.String" Name="helloRegionModule_param" IsQueriable="false"/>
     </variableIterator>
-    <iterator Binds="RegionsView1" RangeSize="25" DataControl="RegionModelAppModuleDataControl" id="RegionsView1Iterator"/>
+    <iterator Binds="RegionsView1" RangeSize="25" DataControl="RegionModelAppModuleDataControl" id="RegionsView1Iterator" ChangeEventPolicy="none"/>
     <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" Binds="RegionsView1Iterator"
                   id="ImplicitViewCriteriaQuery"/>
   </executables>
